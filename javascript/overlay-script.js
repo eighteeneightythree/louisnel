@@ -27,7 +27,9 @@ $( document ).ready(function() {
     	$(".page_body").css("background-color", randomItem);
         $(".page_body").fadeIn();
        	setTimeout(function() {$(".page_body").fadeOut("slow");}, 1500); //slow is 600ms
-       	setTimeout(function() {$("main").css("display", "block");}, 1500);
+       	setTimeout(function() {$("main").css("display", "block");}, 1000);
+
+       	console.log( "overlay fadeOut");
 });
 
 
