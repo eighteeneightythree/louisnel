@@ -39,6 +39,34 @@ $("#archive_table").append(horizontal_html)
 
 }
 
+async function displayArchive2(archiveUrl) {
+    let archiveFetch = await fetch("https://eighteeneightythree.github.io/louisnel/archive_test.json");
+    let archiveRecords = await archiveFetch.json();
+    console.log(archiveRecords);
+  
+    for (let i = 0; i < archiveRecords.length; i++) {
+        var table = document.getElementById("archiveTable");
+      let row = `
+      <tr>
+          <td>${archiveRecords[i].accessionNumber}</td>
+              <td>${archiveRecords[i].description}</td>
+              <td>${archiveRecords[i].media}</td>
+              <td>${archiveRecords[i].archiveTag}</td>
+              <td>${archiveRecords[i].year}</td>
+              <td>${archiveRecords[i].collectionCode}</td>
+      </tr>`
+      
+      console.log(row);
+  
+      table.innerHTML += row;
+    }
+    
 
+  
+  
+  
+  }
+  
+  
 
 
