@@ -104,8 +104,8 @@
       "Construction": "",
       "Archive Tag": "",
       "Brand Tag": "",
-      "Year": null,
-      "Collection Code": null
+      "Year": 0,
+      "Collection Code": 0
     },
     {
       "Accession Number": "..",
@@ -116,7 +116,7 @@
       "Construction": "",
       "Archive Tag": "",
       "Brand Tag": "",
-      "Year": null,
-      "Collection Code": null
+      "Year": 0,
+      "Collection Code": 0
     }
    ]
