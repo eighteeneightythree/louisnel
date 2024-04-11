@@ -6,6 +6,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 	<title>Archive - Louis Nel</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="archive_test.js"></script>
+</head>
 </head>
 <body>
 	<div class="container">
@@ -25,7 +28,9 @@
 			</div>
 
             <div class="archive_body">
+
                 <p>Archive</p>
+				<button id="getArchive" onclick="displayArchive()">Search</button>
 
                 <div id="archive_table">
                    <!--
@@ -38,21 +43,9 @@
                             <th>Year</th>
                             <th>Collection</th>
                         </tr>
-
                     </table>
                     -->
-				<button id="getArchive">Search</button>
-				<script>
-					$(document).ready(function(){
-					  $("button").click(function(){
-						$.getJSON("archive.json", function(result){
-						  $.each(result, function(i, field){
-							$("div").append(field + " ");
-						  });
-						});
-					  });
-					});
-					</script>
+			
                 </div>
             </div>
 		</main>
