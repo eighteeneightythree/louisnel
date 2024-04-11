@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+	<title>Archive - Louis Nel</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<main>
+			<div class="header">
+				<ul class="navbar">
+					<li class="menu_home">
+						<a href="index.html">Louis Nel</a>
+					</li>
+                    <li class="menu_info" >
+                        <a href="archive.html">Info</a>
+                    </li>
+					<li class="menu_archive">
+                        <a href="archive.html">Archive</a>
+					</li>
+				</ul>
+			</div>
+
+            <div class="archive_body">
+                <p>Archive</p>
+
+                <div id="archive_table">
+                   <!--
+                    <table id="archive_results">
+                         <tr id="archive_results_header">
+                            <th>Accession Number</th>
+                            <th>Description</th>
+                            <th>Media</th>
+                            <th>Archive Tag</th>
+                            <th>Year</th>
+                            <th>Collection</th>
+                        </tr>
+
+                    </table>
+                    -->
+				<button id="getArchive">Search</button>
+				<script>
+					$(document).ready(function(){
+					  $("button").click(function(){
+						$.getJSON("archive.json", function(result){
+						  $.each(result, function(i, field){
+							$("div").append(field + " ");
+						  });
+						});
+					  });
+					});
+					</script>
+                </div>
+            </div>
+		</main>
+
+		<div class="footer">
+			<p>Single page from scratch</p>
+			<p>&#169; Louis Nel 2019</p>
+
+		</div>
+	</div>
+
+</body>
+</html>
