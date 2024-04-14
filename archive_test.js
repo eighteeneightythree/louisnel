@@ -60,13 +60,9 @@ async function displayArchive2(archiveUrl) {
   
       table.innerHTML += row;
     }
-    
-
-  
-  
   
   }
   
-  
+displayArchive2();  
 
 
